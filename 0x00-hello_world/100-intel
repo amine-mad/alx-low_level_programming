@@ -1,12 +1,2 @@
 #!/bin/bash
-
-# Read the C file name from the user
-read -p "Enter the C file name (without the extension): " CFILE
-
-# Set the output file name as 100-intel.s
-OUTPUT_FILE="100-intel.s"
-
-# Generate the assembly code using GCC
-gcc -S -masm=intel "${CFILE}.c" -o "$OUTPUT_FILE"
-
-echo "Assembly code generated successfully. Output file: $OUTPUT_FILE"
+gcc -S -masm=intel $CFILE
